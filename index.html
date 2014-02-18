@@ -1,0 +1,76 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Visualizing Sorting Algorithms</title>
+    <script src='http://shamangeorge.com/pyth.js/build/pyth.min.js'></script>
+    <script src='./js/headers.js'></script>
+    <script src='./js/insertion_sort'></script>
+    <script src='./js/selection_sort'></script>
+    <script src='./js/bubble_sort'></script>
+    <style>
+    canvas {
+        border:2px solid black;
+    }
+    #main_ui {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        border-top:2px solid orange;
+    }
+    article {
+        display: inline-block;
+        padding:20px;
+        margin:20px;
+    }
+    button {
+        margin-top: 15px;
+        padding:2px;
+    }
+    .sort {
+    }
+    .restart {
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Sorting Algorithms Illustrated</h1>
+    <section id='main_ui'>
+        <article id='insertion_sort'>
+            <h4>Insertion Sort</h4>
+            <canvas id='canvas_ins'>Sorry no canvas</canvas>
+            <br>
+            <button class='sort' id='sort_ins'>Sort Us</button>
+            <button class='restart' id='reg_ins'>Regenerate</button>
+        </article>
+        <article id='selection_sort'>
+            <h4>Selection Sort</h4>
+            <canvas id='canvas_sel'>Sorry no canvas</canvas>
+            <br>
+            <button class='sort' id='sort_sel'>Sort Us</button>
+            <button class='restart' id='reg_sel'>Regenerate</button>
+        </article>
+        <article id='bubble_sort'>
+            <h4>Bubble Sort</h4>
+            <canvas id='canvas_bubble'>Sorry no canvas</canvas>
+            <br>
+            <button class='sort' id='sort_bubble'>Sort Us</button>
+            <button class='restart' id='reg_bubble'>Regenerate</button>
+        </article>
+        <article id='merge_sort'>
+            <h4>Merge Sort</h4>
+            <canvas id='canvas_merge'>Sorry no canvas</canvas>
+            <br>
+            <button class='sort' id='sort_merge'>Sort Us</button>
+            <button class='restart' id='reg_merge'>Regenerate</button>
+        </article>
+    </section>
+</body>
+<script>
+var ins = new InsertionSort('canvas_ins', 'sort_ins', 'reg_ins');
+var sel = new SelectionSort('canvas_sel', 'sort_sel', 'reg_sel');
+var bub = new BubbleSort('canvas_bubble', 'sort_bubble', 'reg_bubble');
+</script>
+
+</html>
